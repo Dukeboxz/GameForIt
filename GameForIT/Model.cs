@@ -18,7 +18,7 @@ namespace GameForIT
             {
                 if (AttendingPlayerHasGame(gamesMostWanted[i].Key, playersAttending))
                 {
-
+                    Game gameToPlay = DataAccess.GetTheGame(gamesMostWanted[i].Key); 
                 }
 
 
@@ -47,6 +47,13 @@ namespace GameForIT
             foreach(Player gamer in playersAttending)
             {
                 List<Game> gamesInCollection = gamer.GetGamesOwned(); 
+                foreach(Game aGame in gamesInCollection)
+                {
+                    if(aGame.getId() == gameId)
+                    {
+                        return true;
+                    }
+                }
             }
 
 
@@ -111,7 +118,7 @@ namespace GameForIT
                     }
                     else
                     {
-                        wantToPlayGames.Add(gameId, 1)); 
+                        wantToPlayGames.Add(gameId, 1); 
                     }
                 }
             }

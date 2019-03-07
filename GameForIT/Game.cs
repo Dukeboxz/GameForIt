@@ -33,6 +33,11 @@ namespace GameForIT
             return DataAccess.GetTheGame(gameName); 
         }
 
+        public int getId()
+        {
+            return this.id;
+        }
+
         
     }
 }
