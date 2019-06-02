@@ -13,5 +13,12 @@ namespace GameForIT.Pages
         {
 
         }
+
+        public string ChooseGame()
+        {
+            string gameToPlay = string.Empty;
+
+            return gameToPlay;
+        }
     }
 }
